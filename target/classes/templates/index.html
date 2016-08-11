@@ -1,10 +1,22 @@
 
-<html
-      xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <title>Hello Spring Finally!!</title>
-  </head>
-  <body>
-    <p>My first page on thymeleaf!!</p>
-  </body>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Product Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link
+	href="https://cdn.jsdelivr.net/webjars/bootstrap/3.3.7/css/bootstrap.min.css"
+	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"
+	rel="stylesheet" media="screen" />
+
+<script src="https://cdn.jsdelivr.net/webjars/jquery/3.1.0/jquery.js"
+	th:src="@{/webjars/jquery/3.1.0/jquery.js}"></script>
+
+<link href="../static/css/spring-core.css"
+	th:href="@{css/spring-core.css}" rel="stylesheet" media="screen" />
+</head>
+<body>
+	<div class="container">
+		<p>My first page on thymeleaf!!</p>
+	</div>
+</body>
 </html>

@@ -1,0 +1,37 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Product Listing</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link
+	href="https://cdn.jsdelivr.net/webjars/bootstrap/3.3.7/css/bootstrap.min.css"
+	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"
+	rel="stylesheet" media="screen"/>
+
+<script src="https://cdn.jsdelivr.net/webjars/jquery/3.1.0/jquery.js"
+	th:src="@{/webjars/jquery/3.1.0/jquery.js}"></script>
+
+<link href="../static/css/spring-core.css"
+	th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+	<div class="container">
+		<div th:if="${not #lists.isEmpty(products)}">
+			<table class="table table-striped">
+				<tr>
+					<th>ID</th>
+					<th>Description</th>
+					<th>Price</th>
+					<th>URL</th>
+				</tr>
+				<tr th:each="product: ${products}">
+					<th th:text="${product.id}"></th>
+					<th th:text="${product.description}"></th>
+					<th th:text="${product.price}"></th>
+					<th th:text="${product.url}"></th>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

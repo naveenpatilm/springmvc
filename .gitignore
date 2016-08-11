@@ -5,3 +5,4 @@ mvnwcmd
 .mvn/wrapper
 .settings
 /bin
+/target/
