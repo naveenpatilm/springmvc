@@ -34,6 +34,12 @@ public class ProductController {
 		model.addAttribute("product", productService.getProductById(id));
 		return "product";
 	}
+	
+	@RequestMapping("/product/edit/{id}")
+	public String editProduct(@PathVariable int id, Model model) {
+		model.addAttribute("product", productService.getProductById(id));
+		return "productForm";
+	}
 
 	@RequestMapping("/product/new")
 	public String createNewProduct(Model model) {
