@@ -34,11 +34,17 @@ public class ProductController {
 		model.addAttribute("product", productService.getProductById(id));
 		return "product";
 	}
-	
+
 	@RequestMapping("/product/edit/{id}")
 	public String editProduct(@PathVariable int id, Model model) {
 		model.addAttribute("product", productService.getProductById(id));
 		return "productForm";
+	}
+	
+	@RequestMapping("/product/delete/{id}")
+	public String deleteProduct(@PathVariable int id) {
+		productService.deleteProduct(id);
+		return "redirect:/products";
 	}
 
 	@RequestMapping("/product/new")

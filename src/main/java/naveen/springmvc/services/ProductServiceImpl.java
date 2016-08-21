@@ -51,5 +51,10 @@ public class ProductServiceImpl implements ProductService {
 		products.put(product.getId(), product);
 		return product;
 	}
+	
+	@Override
+	public void deleteProduct(int id) {
+		products.remove(id);
+	}
 
 }
