@@ -1,23 +1,26 @@
 package naveen.springmvc.domain;
 
 public class Product {
-	private int id;
+	private Integer id;
 	private String description;
 	private int price;
 	private String url;
 
-	public Product(int id, String description, int price, String url) {
+	public Product() {
+	}
+
+	public Product(Integer id, String description, int price, String url) {
 		this.id = id;
 		this.description = description;
 		this.price = price;
 		this.url = url;
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

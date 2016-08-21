@@ -7,4 +7,5 @@ import naveen.springmvc.domain.Product;
 public interface ProductService {
 	List<Product> listAllProducts();
 	Product getProductById(int id);
+	Product saveOrUpdateProduct(Product product);
 }
